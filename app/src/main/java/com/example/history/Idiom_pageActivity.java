@@ -47,7 +47,7 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
         findViewById(R.id.top).setOnClickListener(this);
         try {
             assetManager = getAssets();
-            strFileName = assetManager.list("idioms");
+            strFileName = assetManager.list("../../assets/idioms");
             System.out.println(strFileName.length);
         }catch (IOException e){
             e.printStackTrace();

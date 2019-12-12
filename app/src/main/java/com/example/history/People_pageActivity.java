@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class People_pageActivity extends AppCompatActivity implements View.OnClickListener {
     ArrayList<ListItem> listItems = new ArrayList<ListItem>();
     AssetManager assetManager = null;
-    private final String relePath = "../../assets/stories";
+    private final String relePath = "../../assets/peoples";
     File myFile = null;
     //strFileName存放stories文件下的所有故事的文件名称
     String[] strFileName = null;
@@ -49,7 +49,7 @@ public class People_pageActivity extends AppCompatActivity implements View.OnCli
         findViewById(R.id.top).setOnClickListener(this);
         try {
             assetManager = getAssets();
-            strFileName = assetManager.list("stories");
+            strFileName = assetManager.list("peoples");
             System.out.println(strFileName.length);
         }catch (IOException e){
             e.printStackTrace();

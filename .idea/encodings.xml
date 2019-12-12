@@ -3,9 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/一寒如此.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/木人石心.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/assets/stories/丁会.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/assets/stories/严休复.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/assets/stories/齐克让.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/丁会.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/严休复.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/齐克让.txt" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
