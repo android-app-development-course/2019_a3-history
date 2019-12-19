@@ -13,79 +13,300 @@
         android:layout_height="wrap_content" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/storyConstraintlayout"
         android:layout_width="match_parent"
         android:layout_height="581dp"
         android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintBottom_toBottomOf="@+id/shenhualinearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/minjianlinearLayout"
+        app:layout_constraintStart_toEndOf="@+id/minjianlinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/shenhualinearLayout">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/minjianlinearLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/bg2"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+            app:layout_constraintBottom_toTopOf="@+id/dangshilinearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/shenhualinearLayout"
             app:layout_constraintHeight_percent="0.5"
             app:layout_constraintHorizontal_weight="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_weight="0.5"
-            app:layout_constraintWidth_percent="0.5"></LinearLayout>
+            app:layout_constraintWidth_percent="0.5">
+            <TextView
+                android:id="@+id/minjiantextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/minjiantextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/minjiantextView4"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/minjiantextView5"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/minjiantextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/minjiantextView7"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/minjiantextView8"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/minjiantextView9"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/shenhualinearLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"
             android:layout_marginRight="0dp"
-            android:background="@drawable/bg3"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/minjianlinearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.5"
             app:layout_constraintHorizontal_weight="0.5"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/minjianlinearLayout"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_weight="0.5"
-            app:layout_constraintWidth_percent="0.5"></LinearLayout>
+            app:layout_constraintWidth_percent="0.5">
+            <TextView
+                android:id="@+id/shenhuatextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shenhuatextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shenhuatextView4"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shenhuatextView5"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shenhuatextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shenhuatextView7"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shenhuatextView8"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shenhuatextView9"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_height="0dp"
             android:layout_width="0dp"
-            android:id="@+id/linearLayout3"
+            android:id="@+id/dangshilinearLayout"
             android:layout_marginLeft="0dp"
-            android:background="@drawable/bg6"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toStartOf="@+id/wenhualinearLayout"
             app:layout_constraintHeight_percent="0.5"
             app:layout_constraintHorizontal_weight="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/minjianlinearLayout"
             app:layout_constraintVertical_weight="0.5"
-            app:layout_constraintWidth_percent="0.5"></LinearLayout>
+            app:layout_constraintWidth_percent="0.5">
+            <TextView
+                android:id="@+id/dangshitextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/dangshitextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/dangshitextView4"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/dangshitextView5"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/dangshitextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/dangshitextView7"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/dangshitextView8"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/dangshitextView9"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_height="0dp"
             android:layout_width="0dp"
-            android:id="@+id/linearLayout4"
+            android:id="@+id/wenhualinearLayout"
             android:layout_marginRight="0dp"
-            android:background="@drawable/bg4"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.5"
             app:layout_constraintHorizontal_weight="0.5"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/dangshilinearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/minjianlinearLayout"
             app:layout_constraintVertical_weight="0.5"
-            app:layout_constraintWidth_percent="0.5"></LinearLayout>
+            app:layout_constraintWidth_percent="0.5">
+            <TextView
+                android:id="@+id/wenhuatextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/wenhuatextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/wenhuatextView4"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/wenhuatextView5"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/wenhuatextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.125"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/wenhuatextView7"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/wenhuatextView8"
+                android:layout_width="match_parent"
+                android:layout_weight="0.125"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/wenhuatextView9"
+                android:layout_weight="0.125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <include
