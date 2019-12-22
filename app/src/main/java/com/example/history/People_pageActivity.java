@@ -19,6 +19,7 @@ public class People_pageActivity extends AppCompatActivity implements View.OnCli
     AssetManager assetManager = null;
     private final String relePath = "../../assets/peoples";
     File myFile = null;
+    String strNew = null;
     //strFileName存放stories文件下的所有故事的文件名称
     String[] strFileName = null;
     private ImageButton people;
@@ -50,12 +51,15 @@ public class People_pageActivity extends AppCompatActivity implements View.OnCli
         try {
             assetManager = getAssets();
             strFileName = assetManager.list("peoples");
-            System.out.println(strFileName.length);
         }catch (IOException e){
             e.printStackTrace();
         }
-        for (String str: strFileName) {
-            listItems.add(new ListItem("test"));
+        for (int i = 0;i < strFileName.length;i++){
+            strFileName[i] = strFileName[i].replace(".txt","");
+        }
+        for (String filename: strFileName
+             ) {
+            listItems.add(new ListItem(filename));
         }
         ListItemAdapter listItemAdapter = new ListItemAdapter(People_pageActivity.this,
                 R.layout.item, listItems);

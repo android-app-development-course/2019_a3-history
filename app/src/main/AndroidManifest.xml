@@ -12,9 +12,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Story_pageActivity" android:launchMode="singleTask"    ></activity>
         <activity android:name=".Idiom_pageActivity" android:launchMode="singleTask"></activity>
+        <activity android:name=".DisplayActivity" android:launchMode="singleTask"></activity>
         <activity android:name=".Philosophy_pageActivity" android:launchMode="singleTask"></activity>
         <activity android:name=".People_pageActivity" android:launchMode="singleTask"></activity>
         <activity android:name=".ListviewActivity"></activity>
+        <activity android:name=".ConcreteStoryListActivity" android:launchMode="singleTask"></activity>
         <activity android:name=".MainActivity" android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
