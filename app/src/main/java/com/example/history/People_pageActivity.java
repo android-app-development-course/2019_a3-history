@@ -5,14 +5,18 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import static com.example.history.OpenUtils.inputStream;
 
 public class People_pageActivity extends AppCompatActivity implements View.OnClickListener {
     ArrayList<ListItem> listItems = new ArrayList<ListItem>();
@@ -65,6 +69,31 @@ public class People_pageActivity extends AppCompatActivity implements View.OnCli
                 R.layout.item, listItems);
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(listItemAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView textView = (TextView) view.findViewById(R.id.name);
+                //获取被点击的列表项的标题文字，然后再在相应的路径中根据文件名字打开文件
+                String strFileName = ConcreteStoryInfo.getstrCurSubDirName() + "/" + textView.getText().toString() + ".txt";
+                try {
+                    inputStream = assetManager.open(strFileName);
+                    byte[] bytes = new byte[inputStream.available()];
+                    inputStream.read(bytes);
+                    ConcreteStoryInfo.setStrContent(bytes);
+                }catch(IOException e){
+                    e.printStackTrace();
+                }finally {
+                    try {
+                        inputStream.close();
+                    }catch (IOException e){
+                        e.printStackTrace();
+                    }
+                }
+                //然后打开显示页面
+                Intent intent = new Intent(MyApplication.getContext(),DisplayActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     public void onClick(View v) {

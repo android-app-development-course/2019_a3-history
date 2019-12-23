@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -62,11 +63,13 @@ public class ConcreteStoryListActivity extends AppCompatActivity implements View
                 TextView textView = (TextView) view.findViewById(R.id.name);
                 //获取被点击的列表项的标题文字，然后再在相应的路径中根据文件名字打开文件
                 String strFileName = ConcreteStoryInfo.getstrCurSubDirName() + "/" + textView.getText().toString() + ".txt";
+                System.out.println(strFileName);
                 try {
                     inputStream = assetManager.open(strFileName);
                     byte[] bytes = new byte[inputStream.available()];
                     inputStream.read(bytes);
                     ConcreteStoryInfo.setStrContent(bytes);
+                    System.out.println(ConcreteStoryInfo.getStrContent());
                 }catch(IOException e){
                     e.printStackTrace();
                 }finally {
@@ -76,9 +79,14 @@ public class ConcreteStoryListActivity extends AppCompatActivity implements View
                         e.printStackTrace();
                     }
                 }
+                if (MyApplication.getContext() == null) {
+                    Log.d(null,"返回了一个空的context");
+                } else {
+                    Intent intent = new Intent(MyApplication.getContext(),DisplayActivity.class);
+                    startActivity(intent);
+                }
                 //然后打开显示页面
-                Intent intent = new Intent(MyApplication.getContext(),DisplayActivity.class);
-                startActivity(intent);
+
             }
         });
     }

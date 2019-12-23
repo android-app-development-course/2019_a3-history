@@ -19,7 +19,6 @@ public class OpenUtils {
             assetManager = asm;
             inputStream = assetManager.open(strFileName);
             bytes = new byte[inputStream.available()];
-            System.out.println("@@@@@@@@@@@@@@@@@@@@"+inputStream.available());
             inputStream.read(bytes);
             System.out.println(inputStream);
             ConcreteStoryInfo.setStrContent(bytes);
