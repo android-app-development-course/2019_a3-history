@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/dangshigushi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/一寒如此.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/一箭双雕.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/木人石心.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/minjiangushi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/丁会.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/严休复.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/齐克让.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/shenhuagushi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/wenhuagushi" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

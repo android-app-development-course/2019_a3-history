@@ -26,7 +26,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 
-public class ConcreteStoryListActivity extends AppCompatActivity implements View.OnClickListener {
+public class ConcreteStoryListActivity extends AppCompatActivity implements View.OnClickListener{
     ArrayList<ListItem> listItems = new ArrayList<ListItem>();
     InputStream inputStream = null;
     AssetManager assetManager = null;

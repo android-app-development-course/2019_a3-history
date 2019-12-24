@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;//随便搞一个注释
             }//随便在搞一个
             case R.id.his_people : {
+                ConcreteStoryInfo.setStrCurSubDirName("peoples");
                 Intent intent = new Intent(this, People_pageActivity .class);
 //                this.onPause();
                 startActivity(intent);

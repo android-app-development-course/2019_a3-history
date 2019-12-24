@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileOptions {
-        encoding "UTF-8"     //或者 "GBK"
-    }
+//    compileOptions {
+//        encoding "utf-8"     //或者 "GBK"
+//    }
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.history"

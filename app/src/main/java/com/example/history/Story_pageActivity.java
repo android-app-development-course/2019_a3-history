@@ -106,7 +106,7 @@ public class Story_pageActivity extends AppCompatActivity implements View.OnClic
         TextView wenhuaHead = (TextView) wenhuaLayout.findViewById(R.id.wenhuatextView);
         wenhuaHead.setText("文化故事(点击查看更多)");
         TextView shenhuaHead = (TextView) shenhuaLayout.findViewById(R.id.shenhuatextView);
-        shenhuaHead.setText("神话故事(点击查看更多)");
+        shenhuaHead.setText("神话故事（点击查看更多)");
         //取得四个故事布局里面的textview并放进数组
         TextView txvminjian[] = new TextView[8];
         TextView txvdangshi[] = new TextView[8];
