@@ -14,7 +14,7 @@ public class OpenUtils {
     public static byte [] bytes = null;
     //把新内容页面的内容传到ConcreteStoryInfo中,strVarify是分辨这些文件在哪个子目录下
     public static void setContentPage(String strVarify,TextView v,AssetManager asm){
-        String strFileName = strVarify + (v.getText().toString())+".txt";
+        String strFileName = strVarify + (v.getText())+".txt";
         try {
             assetManager = asm;
             inputStream = assetManager.open(strFileName);

@@ -25,11 +25,6 @@ public class ConcreteStoryInfo {
     }
 
     public static String getStrContent() {
-            try{
-                return strContent.getBytes("gbk").toString();
-            }catch (IOException e){
-                e.printStackTrace();
-                return  null;
-            }
+        return strContent;
     }
 }

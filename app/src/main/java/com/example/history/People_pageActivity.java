@@ -74,11 +74,15 @@ public class People_pageActivity extends AppCompatActivity implements View.OnCli
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView textView = (TextView) view.findViewById(R.id.name);
                 //获取被点击的列表项的标题文字，然后再在相应的路径中根据文件名字打开文件
-                String strFileName = ConcreteStoryInfo.getstrCurSubDirName() + "/" + textView.getText().toString() + ".txt";
+                ConcreteStoryInfo.setStrCurSubDirName("peoples");
+                String strFileName = ConcreteStoryInfo.getstrCurSubDirName() + "/" + textView.getText() + ".txt";
+                System.out.println(strFileName+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
                 try {
                     inputStream = assetManager.open(strFileName);
                     byte[] bytes = new byte[inputStream.available()];
+                    System.out.println(inputStream.available());
                     inputStream.read(bytes);
+                    System.out.println(bytes);
                     ConcreteStoryInfo.setStrContent(bytes);
                 }catch(IOException e){
                     e.printStackTrace();
