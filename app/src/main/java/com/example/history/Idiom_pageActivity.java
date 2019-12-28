@@ -4,8 +4,10 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,17 +15,21 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static com.example.history.OpenUtils.inputStream;
+
 public class Idiom_pageActivity extends AppCompatActivity implements View.OnClickListener {
+    ArrayList<ListItem> listItems = new ArrayList<ListItem>();
+    AssetManager assetManager = null;
+    private final String relePath = "../../assets/idioms";
+    File myFile = null;
+    String strNew = null;
+    //strFileName存放stories文件下的所有故事的文件名称
+    String[] strFileName = null;
     private ImageButton people;
     private ImageButton story;
     private ImageButton phi;
-    private ImageButton ido;
-    ArrayList<ListItem> listItems = new ArrayList<ListItem>();
-    AssetManager assetManager = null;
-    private final String relePath = "../../assets/stories";
-    File myFile = null;
-    //strFileName存放stories文件下的所有故事的文件名称
-    String[] strFileName = null;
+    private ImageButton ido;;
+
     private void resetImg(){
         people.setImageResource(R.drawable.renwu_pressed);
         story.setImageResource(R.drawable.gushi_pressed);
@@ -39,7 +45,7 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
         phi=(ImageButton) findViewById(R.id.his_phi);
         ido=(ImageButton) findViewById(R.id.his_idiom);
         resetImg();
-        ido.setImageResource(R.drawable.chengyu);
+        people.setImageResource(R.drawable.renwu);
         story.setOnClickListener(this);
         ido.setOnClickListener(this);
         people.setOnClickListener(this);
@@ -47,25 +53,50 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
         findViewById(R.id.top).setOnClickListener(this);
         try {
             assetManager = getAssets();
-            strFileName = assetManager.list("../../assets/idioms");
-            System.out.println(strFileName.length);
+            strFileName = assetManager.list("idioms");
         }catch (IOException e){
             e.printStackTrace();
         }
-        for (String str: strFileName) {
-            listItems.add(new ListItem("test"));
+        for (int i = 0;i < strFileName.length;i++){
+            strFileName[i] = strFileName[i].replace(".txt","");
+        }
+        for (String filename: strFileName
+        ) {
+            listItems.add(new ListItem(filename));
         }
         ListItemAdapter listItemAdapter = new ListItemAdapter(Idiom_pageActivity.this,
                 R.layout.item, listItems);
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(listItemAdapter);
-    }
-    @Override
-    public  boolean onKeyDown(int code, KeyEvent keyEvent){
-        if (code == keyEvent.KEYCODE_BACK){
-            this.finish();
-        }
-        return true;
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TextView textView = (TextView) view.findViewById(R.id.name);
+                //获取被点击的列表项的标题文字，然后再在相应的路径中根据文件名字打开文件
+                ConcreteStoryInfo.setStrCurSubDirName("idioms");
+                String strFileName = ConcreteStoryInfo.getstrCurSubDirName() + "/" + textView.getText() + ".txt";
+                System.out.println(strFileName+"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+                try {
+                    inputStream = assetManager.open(strFileName);
+                    byte[] bytes = new byte[inputStream.available()];
+                    System.out.println(inputStream.available());
+                    inputStream.read(bytes);
+                    System.out.println(bytes);
+                    ConcreteStoryInfo.setStrContent(bytes);
+                }catch(IOException e){
+                    e.printStackTrace();
+                }finally {
+                    try {
+                        inputStream.close();
+                    }catch (IOException e){
+                        e.printStackTrace();
+                    }
+                }
+                //然后打开显示页面
+                Intent intent = new Intent(MyApplication.getContext(),DisplayActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     public void onClick(View v) {
@@ -95,7 +126,6 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
                 break;
             }
             case R.id.his_idiom : {
-
                 break;
             }
 

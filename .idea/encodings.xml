@@ -2,11 +2,16 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/assets/dangshigushi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/dangshigushi/2017年你不可不知的6个党史国史纪念日.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/dangshigushi/丁先国“蚂蚁搬家”搞后勤.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/dangshigushi/亲历者：为什么毛泽东时代没有腐败？.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/一寒如此.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/一箭双雕.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/idioms/木人石心.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/minjiangushi" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/minjiangushi/“三潭印月”的来历.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/assets/minjiangushi/“光棍节”的由来和故事.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/丁会.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/assets/peoples/严休复.txt" charset="GBK" />

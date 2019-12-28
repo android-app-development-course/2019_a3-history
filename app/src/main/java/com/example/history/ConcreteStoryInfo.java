@@ -17,7 +17,20 @@ public class ConcreteStoryInfo {
     }
 
     public static void setStrContent(byte[] content) {
-        strContent = new String(content);
+        if (strCurSubDirName == "peoples"){
+        try{
+            strContent = new String(content,"utf-8");
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    else {
+            try{
+                strContent = new String(content,"gbk");
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+    }
     }
 
     public static String getstrCurSubDirName() {
