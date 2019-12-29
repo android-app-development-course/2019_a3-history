@@ -112,8 +112,8 @@ public class People_pageActivity extends AppCompatActivity implements View.OnCli
                 Intent intent = new Intent(this, Story_pageActivity.class);
 //                this.onPause();
                 startActivity(intent);
-                break;//随便搞一个注释
-            }//随便在搞一个
+                break;
+            }
             case R.id.his_people : {
                 break;
             }

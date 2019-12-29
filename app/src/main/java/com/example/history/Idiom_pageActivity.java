@@ -45,7 +45,7 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
         phi=(ImageButton) findViewById(R.id.his_phi);
         ido=(ImageButton) findViewById(R.id.his_idiom);
         resetImg();
-        people.setImageResource(R.drawable.renwu);
+        people.setImageResource(R.drawable.chengyu);
         story.setOnClickListener(this);
         ido.setOnClickListener(this);
         people.setOnClickListener(this);
@@ -111,8 +111,8 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
                 Intent intent = new Intent(this, Story_pageActivity.class);
 //                this.onPause();
                 startActivity(intent);
-                break;//随便搞一个注释
-            }//随便在搞一个
+                break;
+            }
             case R.id.his_people : {
                 Intent intent = new Intent(this, People_pageActivity.class);
 //                this.onPause();
@@ -128,7 +128,6 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
             case R.id.his_idiom : {
                 break;
             }
-
         }
     }
 }
