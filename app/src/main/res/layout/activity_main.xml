@@ -40,6 +40,15 @@
             android:textFontWeight="1"
             android:textSize="50dp" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:text="如发现内容有错误，欢迎发送邮件到11111@qq.com指正"
+            android:textAlignment="gravity" />
+
 
     </RelativeLayout>
 
