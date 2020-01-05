@@ -45,7 +45,7 @@ public class Idiom_pageActivity extends AppCompatActivity implements View.OnClic
         phi=(ImageButton) findViewById(R.id.his_phi);
         ido=(ImageButton) findViewById(R.id.his_idiom);
         resetImg();
-        people.setImageResource(R.drawable.chengyu);
+        ido.setImageResource(R.drawable.chengyu);
         story.setOnClickListener(this);
         ido.setOnClickListener(this);
         people.setOnClickListener(this);
